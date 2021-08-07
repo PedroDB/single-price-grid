@@ -1,0 +1,151 @@
+:root {
+    --cyan: hsl(179, 39%, 51%);
+    --cyanClear:hsl(179,44%,55%);
+    --yellow: hsl(71, 73%, 54%);
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+
+    --principleFont: 'Karla', sans-serif;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--grayishBlue);
+    font-size: 1.6rem;
+    font: var(--principleFont);
+    font-family: var(--principleFont);
+}
+
+h1{
+    color: var(--cyan);
+    font-size: 3rem;
+}
+
+h2{
+    color: var(--yellow);
+    font-size: 2rem;
+}
+
+/* Class */
+.container {
+    max-width: 70rem;
+    /* height: 100%; */
+    background-color: var(--lightGray);
+    border-radius: 0.5rem;
+    margin-top: 0;
+    padding: 2rem 0 0 0;
+    
+}
+
+.container__top{
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 10rem auto 0 auto;
+        padding: 0;
+    }
+
+    .container__top{
+        grid-column: 1 / 3;
+        padding: 2rem 5rem 0 5rem;
+        
+    }
+}
+
+.container__top p{
+    font-size: 1.6rem;
+    color: var(--grayishBlue);
+}
+
+.container h3{
+    color: var(--lightGray);
+    font-size: 1.8rem;
+    margin: 1rem 0 2rem 0;
+    
+}
+
+.container__left{
+    background-color: var(--cyan);
+    color: var(--lightGray);
+    font-family: var(--principleFont);
+    padding: 3rem 2rem;
+    
+}
+
+@media (min-width: 768px) {
+    .container__left{
+        padding: 3rem 5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+}
+
+.container__left p{
+    font-size: 1.6rem;
+}
+
+.container__left p span{
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.container__right{
+    background-color: var(--cyanClear);
+    padding: 3rem 2rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem ;
+}
+
+@media (min-width: 768px) {
+    .container__right{
+        padding: 3rem 5rem;
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.container__right ul{
+    font-family: var(--principleFont);
+    font-size: 1.2rem;
+    color: var(--lightGray);
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+    line-height: 1.7;
+}
+
+.last__text{
+    margin-bottom: 5rem;
+}
+
+
+.button__container{
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+
+.btn{
+    background-color: var(--yellow);
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--lightGray);
+    padding: 1.5rem 9rem;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+
